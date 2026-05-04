@@ -1,0 +1,9 @@
+Risk ID,Risk Description,Category,NIST AI RMF Function,Likelihood,Impact,Risk Rating,Mitigation,Owner,Status,800-53 Mapping
+AI-001,Employee pastes customer PII/PHI into public ChatGPT or Claude,Data Leakage,Govern,High,High,Critical,AI Acceptable Use Policy + DLP + CASB block + mandatory training,ISSO,Open,PT-2, PL-4
+AI-002,Prompt injection via uploaded PDF causes LLM to reveal system prompt or confidential data,LLM Security,Map,Medium,High,High,Input sanitization + disable file parsing + LLM firewall + adversarial training,AppSec,Open,SI-10, SA-22
+AI-003,Third-party LLM vendor trains foundation model on customer data,Intellectual Property,Manage,Low,Critical,High,Zero data retention contract + BAA + vendor audit,Legal,Open,SA-9, SA-22
+AI-004,Model hallucination provides incorrect legal/medical/financial advice to customer,Trustworthiness,Measure,Medium,Critical,Critical,Human-in-the-loop review + output disclaimers + use case restrictions,Business Owner,Open,SA-22
+AI-005,Shadow AI: business units procure unapproved AI SaaS without security review,Governance,Govern,High,Medium,High,SaaS discovery tools + procurement policy gate + security training,Procurement,Open,CM-10, SA-9
+AI-006,Model bias in hiring/finance LLM causes discriminatory outcomes,Fairness,Map,Low,High,Medium,Algorithmic Impact Assessment + bias testing + human oversight,Ethics Committee,Open,SA-22
+AI-007,Training data poisoning via public data scrape injects backdoor,Data Integrity,Manage,Low,Critical,Medium,Data provenance checks + model validation + red teaming,MLSecOps,Open,SI-7
+AI-008,Model theft via API extraction or model inversion attacks,Confidentiality,Measure,Low,High,Medium,Rate limiting + watermarking + query monitoring,SOC,Open,SC-7, SI-4
